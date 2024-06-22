@@ -1,5 +1,5 @@
 package com.datencontrol.library.book;
 
 public enum BookStatus {
-    FREE, BORRED
+    FREE, BORROWED
 }

@@ -29,6 +29,7 @@ public class BookController {
     @Autowired
     private BorrowRepository borrowRepository;
 
+
     // getUserConnectedId should be accessible everywhere in program
     public static Integer getUserConnectedId(){
         return 1;
@@ -117,12 +118,12 @@ public class BookController {
 
     @GetMapping(value="/categories")
     public ResponseEntity getCategory(){
-        Category category = new Category("BD");
+        /*Category category = new Category("BD");
         Category categoryRoman = new Category("Roman");
         Category categoryAction = new Category("Action");
-        Category categoryEconomic = new Category("Economic");
+        Category categoryEconomic = new Category("Economic");*/
 
-        return new ResponseEntity(Arrays.asList(category, categoryAction, categoryRoman, categoryEconomic),HttpStatus.OK);
+        return new ResponseEntity(categoryRepository.findAll(),HttpStatus.OK);
     }
 
 
