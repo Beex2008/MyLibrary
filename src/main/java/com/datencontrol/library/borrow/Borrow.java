@@ -2,18 +2,37 @@ package com.datencontrol.library.borrow;
 
 import com.datencontrol.library.book.Book;
 import com.datencontrol.library.user.User;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
+@Entity
 public class Borrow {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private int id;
+
+    @ManyToOne
     private User borrower;
+
+    @ManyToOne
     private User lender;
+
+    @ManyToOne
     private Book book;
 
     private LocalDate askDate;
     private LocalDate closeDate;
 
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     public LocalDate getAskDate() {
         return askDate;
     }

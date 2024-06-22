@@ -1,8 +1,14 @@
-com/datencontrol/library/borrow/BorrowController.class
+com/datencontrol/library/common/ExceptionResolver.class
 com/datencontrol/library/book/Category.class
 com/datencontrol/library/book/Book.class
+com/datencontrol/library/user/User.class
+com/datencontrol/library/book/BookRepository.class
+com/datencontrol/library/book/BookController.class
+com/datencontrol/library/book/BookStatus.class
+com/datencontrol/library/borrow/BorrowRepository.class
+com/datencontrol/library/borrow/BorrowController.class
 com/datencontrol/library/user/UserController.class
 com/datencontrol/library/LibraryApplication.class
-com/datencontrol/library/user/User.class
+com/datencontrol/library/book/CategoryRepository.class
 com/datencontrol/library/borrow/Borrow.class
-com/datencontrol/library/book/BookController.class
+com/datencontrol/library/user/UserRepository.class

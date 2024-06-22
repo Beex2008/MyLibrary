@@ -1,8 +1,14 @@
 /Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/LibraryApplication.java
 /Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/book/Book.java
 /Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/book/BookController.java
+/Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/book/BookRepository.java
+/Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/book/BookStatus.java
 /Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/book/Category.java
+/Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/book/CategoryRepository.java
 /Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/borrow/Borrow.java
 /Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/borrow/BorrowController.java
+/Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/borrow/BorrowRepository.java
+/Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/common/ExceptionResolver.java
 /Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/user/User.java
 /Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/user/UserController.java
+/Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/user/UserRepository.java
