@@ -8,7 +8,7 @@ import java.util.List;
 @Repository
 public interface BorrowRepository extends CrudRepository<Borrow, Integer> {
 
-    List<Borrow> findByBorrowId(Integer borrowerId);
+    List<Borrow> findByBorrowerId(Integer borrowerId); // findByBorrowId should be putted here
     List<Borrow> findByBookId(Integer bookId); // search in the book entity by Id, if the element deleted
 
 }

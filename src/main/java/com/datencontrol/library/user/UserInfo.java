@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
 @Entity
-public class User {
+public class UserInfo {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -22,8 +22,8 @@ public class User {
 
     private String lastName;
 
-    public User(){}
-    public User(String email) {
+    public UserInfo(){}
+    public UserInfo(String email) {
         this.email = email;
     }
 

@@ -1,7 +1,7 @@
 package com.datencontrol.library.borrow;
 
 import com.datencontrol.library.book.Book;
-import com.datencontrol.library.user.User;
+import com.datencontrol.library.user.UserInfo;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -14,10 +14,10 @@ public class Borrow {
     private int id;
 
     @ManyToOne
-    private User borrower;
+    private UserInfo borrower;
 
     @ManyToOne
-    private User lender;
+    private UserInfo lender;
 
     @ManyToOne
     private Book book;
@@ -49,19 +49,19 @@ public class Borrow {
         this.closeDate = closeDate;
     }
 
-    public User getBorrower() {
+    public UserInfo getBorrower() {
         return borrower;
     }
 
-    public void setBorrower(User borrower) {
+    public void setBorrower(UserInfo borrower) {
         this.borrower = borrower;
     }
 
-    public User getLender() {
+    public UserInfo getLender() {
         return lender;
     }
 
-    public void setLender(User lender) {
+    public void setLender(UserInfo lender) {
         this.lender = lender;
     }
 

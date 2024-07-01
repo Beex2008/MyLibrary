@@ -1,10 +1,11 @@
 package com.datencontrol.library.book;
 
-import com.datencontrol.library.user.User;
+import com.datencontrol.library.user.UserInfo;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
+//@Table
 public class Book {
     
     @Id
@@ -18,14 +19,13 @@ public class Book {
     private Category categorie;
 
     @ManyToOne
-    private User user;
+    private UserInfo user;
 
     private BookStatus bookStatus;
     private boolean bookAvailable; // deleting wont be on the real DB, rather than logical delete
 
     @Transient
     private int categoryId;
-
 
     public int getId() {
         return id;
@@ -43,11 +43,11 @@ public class Book {
         this.id = id;
     }
 
-    public User getUser() {
+    public UserInfo getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(UserInfo user) {
         this.user = user;
     }
 

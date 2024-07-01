@@ -1,7 +1,7 @@
+com/datencontrol/library/user/UserInfo.class
 com/datencontrol/library/common/ExceptionResolver.class
 com/datencontrol/library/book/Category.class
 com/datencontrol/library/book/Book.class
-com/datencontrol/library/user/User.class
 com/datencontrol/library/book/BookRepository.class
 com/datencontrol/library/book/BookController.class
 com/datencontrol/library/book/BookStatus.class

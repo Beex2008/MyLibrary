@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 public class UserController {
@@ -20,10 +19,10 @@ public class UserController {
 
 
     @PostMapping(value="/users")
-    public ResponseEntity addUser(@RequestBody @Valid User user){
+    public ResponseEntity addUser(@RequestBody @Valid UserInfo user){
 
         //User userOld = new User("lewis.koua@outlook.fr");
-        List<User> users = userRepository.findByEmail(user.getEmail());
+        List<UserInfo> users = userRepository.findByEmail(user.getEmail());
         if(!users.isEmpty()){
             return new ResponseEntity("Users already existing", HttpStatus.BAD_REQUEST);
         }

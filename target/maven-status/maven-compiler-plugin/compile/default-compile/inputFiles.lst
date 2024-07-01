@@ -9,6 +9,6 @@
 /Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/borrow/BorrowController.java
 /Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/borrow/BorrowRepository.java
 /Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/common/ExceptionResolver.java
-/Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/user/User.java
 /Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/user/UserController.java
+/Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/user/UserInfo.java
 /Users/lewiskoua/Desktop/Projekte/rest-api/MyLibrary/src/main/java/com/datencontrol/library/user/UserRepository.java

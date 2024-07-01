@@ -7,7 +7,7 @@ import java.util.List;
 
 
 @Repository
-public interface UserRepository extends CrudRepository<User, Integer> {
+public interface UserRepository extends CrudRepository<UserInfo, Integer> {
 
-    List<User> findByEmail(String userId);
+    List<UserInfo> findByEmail(String userId);
 }

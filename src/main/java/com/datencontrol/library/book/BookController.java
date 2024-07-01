@@ -2,7 +2,7 @@ package com.datencontrol.library.book;
 
 import com.datencontrol.library.borrow.Borrow;
 import com.datencontrol.library.borrow.BorrowRepository;
-import com.datencontrol.library.user.User;
+import com.datencontrol.library.user.UserInfo;
 import com.datencontrol.library.user.UserRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,10 +44,10 @@ public class BookController {
 
         if(status != null  && status == BookStatus.FREE)
             // for free books
-            books = bookRepository.findBySatusAndUserIdNotAndDeleteFalse(status, userConectedId);
+            books = bookRepository.findByBookStatusAndUserIdNotAndBookAvailableFalse(status, userConectedId);
         else
             // for book
-            books = bookRepository.findByUserIdAndDeletedFalse(userConectedId);
+            books = bookRepository.findByUserIdAndBookAvailableFalse(userConectedId);
 
         return new ResponseEntity(Arrays.asList(books), HttpStatus.OK);
     }
@@ -57,7 +57,7 @@ public class BookController {
     public ResponseEntity addBook(@RequestBody @Valid Book book){
 
         Integer userConectedId = this.getUserConnectedId();
-        Optional<User> user = userRepository.findById(userConectedId);
+        Optional<UserInfo> user = userRepository.findById(userConectedId);
         Optional<Category> category = categoryRepository.findById(book.getCategoryId());
 
         if(category.isPresent())
@@ -89,7 +89,7 @@ public class BookController {
 
         for(Borrow borrow: borrows){
             if(borrow.getCloseDate() == null){
-                User borrower = borrow.getBorrower();
+                UserInfo borrower = borrow.getBorrower();
                 return new ResponseEntity(borrower, HttpStatus.CONFLICT);
             }
         }

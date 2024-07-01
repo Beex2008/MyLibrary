@@ -5,10 +5,9 @@ import com.datencontrol.library.book.Book;
 import com.datencontrol.library.book.BookController;
 import com.datencontrol.library.book.BookRepository;
 import com.datencontrol.library.book.BookStatus;
-import com.datencontrol.library.user.User;
+import com.datencontrol.library.user.UserInfo;
 import com.datencontrol.library.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cglib.core.Local;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -34,7 +33,7 @@ public class BorrowController {
     public ResponseEntity getBorrows(){
        // Borrow borrow = new Borrow();
        // borrow.setAskDate(LocalDate.now());
-        List<Borrow> borrows = borrowRepository.findByBorrowId(BookController.getUserConnectedId());
+        List<Borrow> borrows = borrowRepository.findByBorrowerId(BookController.getUserConnectedId());
         return new ResponseEntity(borrows, HttpStatus.OK);
     }
 
@@ -42,7 +41,7 @@ public class BorrowController {
     public ResponseEntity createBorrow(@PathVariable("bookId") String bookId){
 
         Integer userConnectedId = BookController.getUserConnectedId();
-        Optional<User> borrower = userRepository.findById(userConnectedId);
+        Optional<UserInfo> borrower = userRepository.findById(userConnectedId);
         Optional<Book> book = bookRepository.findById(Integer.valueOf(bookId));
 
         if(borrower.isPresent() && book.isPresent() && book.get().getBookStatus().equals(BookStatus.FREE)){
